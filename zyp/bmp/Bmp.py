@@ -67,10 +67,7 @@ class Bmp(BmpFileHeader, BmpStructHeader):
         self.biPlanes = file.read(2)
         self.biBitCount = file.read(2)
         # pixel size
-        self.__bitSize = (int.from_bytes(self.bfSize,
-                                         'little') -
-                          int.from_bytes(self.bfOffBits, 'little')) \
-                         // (int.from_bytes(self.biBitCount, 'little') // 8)
+        self.__bitSize = self.width * self.height * self.bit_count
         self.biCompression = file.read(4)
         self.biSizeImage = file.read(4)
         self.biXPelsPerMeter = file.read(4)
