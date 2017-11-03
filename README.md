@@ -17,6 +17,7 @@ bmp.graying()  # graying
 bmp.generate('target_file_path') #use this to save change
 ```
 ## problems
+!!!! my english is poor... please forgive me ☺
 1. don't have error checking
 2. rotation only can rotate anticlockwise 90°
 3. unknown errors (-.-)
